@@ -1,0 +1,19 @@
+.dropDownMenu {
+    @apply flex justify-end mr-4;
+
+    > .label {
+        @apply mr-2;
+    }
+}
+
+.catalog {
+    @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4;
+
+    > .product {
+        @apply flex flex-col items-center p-4 transition ease-out hover:rounded-lg hover:shadow-xl duration-300;
+
+        > .image {
+            @apply h-[362px] w-[320px] object-cover object-center rounded-lg;
+        }
+    }
+}
