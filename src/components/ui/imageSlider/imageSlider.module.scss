@@ -1,6 +1,6 @@
 .fullscreen {
-    @apply fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 cursor-pointer;
+    @apply fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 cursor-zoom-out;
     > button {
-        @apply absolute text-white text-3xl;
+        @apply absolute text-white text-3xl p-3;
     }
 }

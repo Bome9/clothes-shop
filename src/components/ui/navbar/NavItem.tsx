@@ -15,7 +15,6 @@ const NavItem: FC<INavItem> = ({item}) => {
 
     const IsActive = pathname === item.link || pathname.startsWith(`${item.link}/`)
 
-
     return <div>
         <Link href={item.link} className={cn('text-base font-medium transition duration-200 hover:text-orange-600 ease-in-out', IsActive ? 'text-orange-600' : '')} >{item.name}</Link>
     </div>

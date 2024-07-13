@@ -13,8 +13,4 @@ export const menu: IMenuItem[] = [
         name: "About",
         link: "/about",
     },
-    {
-        name: "Cart",
-        link: "/cart",
-    },
 ]

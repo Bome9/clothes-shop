@@ -17,6 +17,12 @@ const CatalogMen: FC = () => {
         return <Preloader />;
     }
 
+    if (error) {
+        return <div className="flex h-screen justify-center items-center">
+            {error}
+        </div>;
+    }
+
     return (
         <div>
             <SortMenu sortOption={sortOption} setSortOption={setSortOption} originalProducts={originalProducts} setProducts={setProducts} />
