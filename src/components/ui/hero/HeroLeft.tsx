@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { FC } from "react";
-import Hero from "./Hero";
 
 
 const HeroLeft: FC = () => {

@@ -1,4 +1,5 @@
 import { IProduct } from "@/types/product.interface";
+import {motion, AnimatePresence} from "framer-motion";
 
 interface ISortMenuProps {
     sortOption: string;
@@ -6,6 +7,7 @@ interface ISortMenuProps {
     originalProducts: IProduct[];
     setProducts: (products: IProduct[]) => void
 }
+
 
 const SortMenu: React.FC<ISortMenuProps> = ({ sortOption, setSortOption, originalProducts, setProducts }) => {
 

@@ -2,15 +2,23 @@ import { IMenuItem } from "./menu.interface";
 
 export const menu: IMenuItem[] = [
     {
-        name: "Home",
+        name: "NEW ARRIVALS",
         link: "/",
     },
     {
-        name: "Products",
+        name: "PRODUCTS",
         link: "/products",
     },
     {
-        name: "About",
-        link: "/about",
+        name: "MEN",
+        link: "/products/men",
+    },
+    {
+        name: "WOMEN",
+        link: "/products/women",
+    },
+    {
+        name: "SALE",
+        link: "/products/sale",
     },
 ]

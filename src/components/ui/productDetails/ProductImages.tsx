@@ -12,8 +12,6 @@ interface IProductImagesProps {
 }
 
 const ProductImages: React.FC<IProductImagesProps> = ({product, setIsFullscreen, setCurrentImageIndex}) => {
-
-
     return (
         <div className={s.images}>
             {product?.images.map((image, index) => (

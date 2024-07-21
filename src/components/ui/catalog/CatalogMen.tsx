@@ -24,14 +24,14 @@ const CatalogMen: FC = () => {
     }
 
     return (
-        <div>
+        <div className="mt-4 p-4">
             <SortMenu sortOption={sortOption} setSortOption={setSortOption} originalProducts={originalProducts} setProducts={setProducts} />
 
             <div className="flex text-center justify-center">
                 <div className={s.catalog}>
                     {products.map(product => (
                         <div key={product.id} className={s.product}>
-                            <Link key={product.id} href={`/products/men/${product.slug}/${product.id}`}>
+                            <Link key={product.id} href={`/products/${product.slug}/${product.id}`}>
                                 <Image
                                     className={s.image}
                                     src={product.images[0]}

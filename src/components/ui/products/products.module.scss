@@ -1,11 +1,21 @@
 .product {
-    @apply relative overflow-hidden rounded-lg drop-shadow-lg transition-opacity hover:opacity-90 duration-300 ease-in-out;
+    @apply relative overflow-hidden rounded-lg drop-shadow-lg max-h-[650px] max-w-[650px];
 
-    > .image {
-        @apply h-[662px] w-[520px] object-cover object-center
+    >.image {
+        @apply h-full w-full object-cover object-center transition-opacity hover:opacity-90 duration-300 ease-in-out;
     }
 
-    > .productBtn {
-        @apply absolute rounded-lg bottom-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 text-black text-center px-40 py-4;
+    >.productBtn {
+        @apply absolute rounded-lg bottom-4 left-[50%] -translate-x-1/2 bg-white transition hover:bg-opacity-65 duration-300 bg-opacity-50 text-black text-center px-40 py-4;
+
+        &::before {
+            @apply absolute inset-0 bg-white bg-opacity-50 rounded-lg backdrop-blur-sm;
+            content: '';
+            z-index: -1;
+        }
+
+        >.text {
+            @apply text-xl;
+        }
     }
 }
