@@ -11,7 +11,7 @@ import useLockBodyScroll from "@/hooks/useLockBodyScroll";
 const Cart: React.FC = () => {
     const { isOpen, items, closeCart, removeItemFromCart, updateItemQuantity } = useCartStore()
 
-    useLockBodyScroll({ isOpen })
+    useLockBodyScroll(isOpen)
 
     const overlayVariants = {
         hidden: { opacity: 0 },

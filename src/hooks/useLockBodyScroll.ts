@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 
-const useLockBodyScroll = ({ isOpen }: { isOpen: boolean }) => {
+const useLockBodyScroll = (condition: boolean) => {
 
     useEffect(() => {
-        if (isOpen) {
+        if (condition) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "";
@@ -12,7 +12,7 @@ const useLockBodyScroll = ({ isOpen }: { isOpen: boolean }) => {
         return () => {
             document.body.style.overflow = "";
         };
-    }, [isOpen]);
+    }, [condition]);
 }
 
 export default useLockBodyScroll;
