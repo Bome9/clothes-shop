@@ -1,0 +1,55 @@
+.search {
+    @apply fixed inset-0 z-50 flex place-items-start justify-center;
+
+    > .overlay {
+        @apply absolute inset-0 bg-black bg-opacity-75;
+    }
+
+    > .searchContainer {
+        @apply relative w-full bg-white shadow-md py-5 px-6 z-10;
+
+        > .header {
+            @apply flex items-center justify-between w-full;
+
+            > .searchForm {
+                @apply w-full;
+
+                > .searchInput {
+                    @apply bg-transparent w-full mx-4 outline-none;
+                }
+            }
+        }
+
+        > .searchResults {
+            @apply w-full h-full;
+            
+            > .resultsHeader {
+                @apply mt-6 text-xl font-medium;
+            }
+
+            > .resultsWrapper {
+                @apply flex;
+                
+                > .resultsAutocomplites {
+                    @apply mt-4;
+
+                    > .autocomplite {
+                        @apply flex gap-2 py-2 pr-16 pl-6 text-sm font-medium hover:bg-black hover:bg-opacity-10 transition duration-300;
+                    }
+                }
+
+                > .resultsProducts {
+                    @apply hidden lg:flex md:flex flex-col items-center justify-center mb-4 lg:flex-row;
+
+                    > .product {
+                        @apply p-4 transition ease-out hover:rounded-lg hover:shadow-xl duration-300;
+                    }
+                }
+            }
+
+            > .noResults {
+                @apply text-center text-lg text-gray-600;
+            }
+        }
+    }
+}
