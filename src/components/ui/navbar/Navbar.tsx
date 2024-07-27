@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <header className="border-b fixed w-full shadow-md bg-white z-50">
             <div className="flex items-center py-5 px-4 sm:px-6 lg:px-8 lg:max-w-7xl mx-auto">
                 <Link href="/">
-                    <Image src='/carhartt-logo.png' alt='logo' width={120} height={120} />
+                    <Image src='/carhartt-logo.png' priority alt='logo' width={120} height={120} />
                 </Link>
                 <nav className="hidden lg:flex gap-12 ml-8">
                     {menu.map(item => (

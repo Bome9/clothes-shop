@@ -1,9 +1,9 @@
-import CatalogMen from "@/components/ui/catalog/CatalogMen";
+import Catalog from "@/components/ui/catalog/Catalog";
 
 export default function Products() {
     return (
         <div>
-            <CatalogMen />
+            <Catalog gender={"Men"} />
         </div>
     );
 }

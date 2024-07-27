@@ -1,3 +1,4 @@
+import FilterMenu from "@/components/ui/filterMenu/FilterMenu";
 import { IProduct } from "@/types/product.interface";
 import {motion, AnimatePresence} from "framer-motion";
 
@@ -24,11 +25,14 @@ const SortMenu: React.FC<ISortMenuProps> = ({ sortOption, setSortOption, origina
     }
 
     return (
-        <div className="flex justify-end mr-4">
+        <div className="flex justify-between mr-4 ml-4">
+            <div>
+                <FilterMenu />
+            </div>
             <select id="sort" value={sortOption} onChange={(e) => handleSortChange(e.target.value)} className="border border-gray-300 rounded p-2">
                 <option value="default">Default</option>
-                <option value="price-asc">Price: Low to High</option>
-                <option value="price-desc">Price: High to Low</option>
+                <option value="price-asc">Low to High</option>
+                <option value="price-desc">High to Low</option>
             </select>
         </div>
     )

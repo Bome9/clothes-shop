@@ -1,7 +1,7 @@
 import ProductDetailsPage from "@/components/ui/productDetails/ProductDetailsPage";
 
 export default function ProductDetails({
-    params,
+    params
 }: {
     params: { productId: string, productSlug: string };
 }) {

@@ -9,9 +9,16 @@ import { useFetchProducts } from "@/hooks/useFetchProducts";
 import Link from "next/link";
 
 
-const CatalogMen: FC = () => {
+
+interface ICatalogProps {
+    gender: string
+}
+
+const Catalog: FC<ICatalogProps> = ({gender}) => {
 
     const { products, loading, error, sortOption, originalProducts, setProducts, setSortOption } = useFetchProducts();
+
+    const filteredProducts = products.filter(product => product.gender === gender);
 
     if (loading) {
         return <Preloader />;
@@ -29,7 +36,7 @@ const CatalogMen: FC = () => {
 
             <div className="flex text-center justify-center">
                 <div className={s.catalog}>
-                    {products.map(product => (
+                    {filteredProducts.map(product => (
                         <div key={product.id} className={s.product}>
                             <Link key={product.id} href={`/products/${product.slug}/${product.id}`}>
                                 <Image
@@ -49,4 +56,4 @@ const CatalogMen: FC = () => {
     );
 }
 
-export default CatalogMen;
+export default Catalog;

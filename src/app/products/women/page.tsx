@@ -1,8 +1,9 @@
+import Catalog from "@/components/ui/catalog/Catalog";
 
-export default function Products () {
+export default function Products() {
     return (
         <div>
-            Women
+            <Catalog gender={"Women"} />
         </div>
-    )
+    );
 }
